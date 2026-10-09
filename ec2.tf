@@ -43,7 +43,7 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
 resource "aws_instance" "web_1" {
   ami           = "ami-0b6d9d3d33ba97d99" 
   instance_type = "t3.micro"
-  key_name      = "jonahnew"
+  key_name      = "key1"
 
   subnet_id = aws_subnet.pub-sub1.id
 
@@ -71,7 +71,7 @@ EOF
 resource "aws_instance" "web_2" {
   ami           = "ami-0b6d9d3d33ba97d99"
   instance_type = "t3.micro"
-  key_name      = "jonahnew"
+  key_name      = "key1"
 
   subnet_id = aws_subnet.pub-sub2.id
 
